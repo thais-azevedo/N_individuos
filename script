@@ -1,0 +1,25 @@
+# Tamanho da população
+print ('Qual o n° populacional? ')
+
+n_populacional = input ()
+n_populacional = int(n_populacional)
+
+#Frequência de indivíduos com o genótipo aa
+freq_aa = 0.003 
+
+# Calcular a frequência do alelo a
+alelo_a = freq_aa ** 0.5
+
+#Calcular a frequência do alelo A
+alelo_A = 1 - alelo_a
+
+# Calcular as frequências dos genótipos
+genotipo_AA = alelo_A * alelo_A
+genotipo_Aa = 2 * alelo_A * alelo_a
+
+#Número de indivíduos homozigotos dominantes (AA) e heterozigotos (Aa)
+n_AA = int(genotipo_AA * n_populacional)
+n_Aa = int(genotipo_Aa * n_populacional)
+           
+print ('Número de indivíduos homozigotos AA: ' + str(n_AA))
+print ('Número de indivíduos heterozigotos Aa: ' + str(n_Aa))
